@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hello-app-container
-          image: seu-usuario/hello-app:latest  # Esta tag será atualizada automaticamente
+          image: testandovisse/hello-app:latest  # Esta tag será atualizada automaticamente
           ports:
             - containerPort: 8000
       imagePullSecrets:
