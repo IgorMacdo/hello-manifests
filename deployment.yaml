@@ -16,6 +16,29 @@ spec:
         - name: hello-app-container
           image: testandovisse/hello-app:0f05e59f11e350e713e363b1612e5694f86dfbb0
           ports:
-            - containerPort: 8000
+            - containerPort: 80
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 3
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
       imagePullSecrets:
       - name: regcred
