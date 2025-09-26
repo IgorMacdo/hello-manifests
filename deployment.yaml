@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hello-app-container
-          image: testandovisse/hello-app:480392659dba8301e7146bb9a49d6201915e068b
+          image: testandovisse/hello-app:813369a6b0674f4574f99ea70902f7e3c2790be9
           ports:
             - containerPort: 80
           livenessProbe:
