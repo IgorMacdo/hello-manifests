@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hello-app-container
-          image: IgorMacdo/hello-app:0cce2eef8f4fd97247e880c41aa11bbcb6b8aafb
+          image: testandovisse/hello-app:c376c410f3993978996a3fa602135ad4fdc518f9
           ports:
             - containerPort: 8000
       imagePullSecrets:
